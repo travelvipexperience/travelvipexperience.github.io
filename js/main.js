@@ -130,4 +130,25 @@ jQuery(document).ready(function($) {
 
   // custom code
 
+  var $contactForm = $('#contact-form');
+  $contactForm.submit(function(e) {
+    e.preventDefault();
+    $.ajax({
+      url: '//formspree.io/xajkqppm',
+      method: 'POST',
+      data: $(this).serialize(),
+      dataType: 'json',
+      beforeSend: function() {
+        $contactForm.append('<div class="alert alert--loading">Enviando…</div>');
+      },
+      success: function(data) {
+        $contactForm.find('.alert--loading').hide();
+        $contactForm.append('<div class="alert alert--success">Dados enviados com sucesso. Entraremos em contato em breve!</div>');
+      },
+      error: function(err) {
+        $contactForm.find('.alert--loading').hide();
+        $contactForm.append('<div class="alert alert--error">Ops, algo deu errado, tente enviar novamente!</div>');
+      }
+    });
+  });
 });
