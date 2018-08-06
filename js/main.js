@@ -139,9 +139,9 @@ jQuery(document).ready(function($) {
       data: $(this).serialize(),
       dataType: 'json',
       beforeSend: function() {
+        $('#thankYou').hide();
+        $('#erro').hide();
         $('#enviando').show();
-        $('#thankYou').show();
-        $('#erro').show();
       },
       success: function(data) {
         $('#enviando').hide();
