@@ -143,6 +143,7 @@ jQuery(document).ready(function($) {
       },
       success: function(data) {
         $('#enviando').hide();
+        $('contact-form').hide();
         $('#thankYou').show();
       },
       error: function(err) {
