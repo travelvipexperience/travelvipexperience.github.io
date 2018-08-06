@@ -139,15 +139,15 @@ jQuery(document).ready(function($) {
       data: $(this).serialize(),
       dataType: 'json',
       beforeSend: function() {
-        $contactForm.attr('<div class="alert alert--loading">Enviando…</div>');
+        $('#enviando').show();
       },
       success: function(data) {
-        $contactForm.find('.alert--loading').hide();
-        $contactForm.attr('<div class="alert alert--success">Dados enviados com sucesso. Entraremos em contato em breve!</div>');
+        $('#enviando').hide();
+        $('#thankYou').show();
       },
       error: function(err) {
-        $contactForm.find('.alert--loading').hide();
-        $contactForm.attr('<div class="alert alert--error">Ops, algo deu errado, tente enviar novamente!</div>');
+        $('#enviando').hide();
+        $('#erro').show();
       }
     });
   });
