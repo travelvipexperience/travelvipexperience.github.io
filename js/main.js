@@ -154,29 +154,4 @@ jQuery(document).ready(function($) {
       }
     });
   });
-
-  var $contactForm = $('#contact-form-kleber');
-  $contactForm.submit(function(e) {
-    e.preventDefault();
-    $.ajax({
-      url: '//formspree.io/mowbllpm',
-      method: 'POST',
-      data: $(this).serialize(),
-      dataType: 'json',
-      beforeSend: function() {
-        $('#erro-kleber').hide();
-        $('#enviando-kleber').show();
-      },
-      success: function(data) {
-        $('#enviando-kleber').hide();
-        $('#info-kleber').hide();
-        $('#contact-form-kleber').hide();
-        $('#thankYou-kleber').show();
-      },
-      error: function(err) {
-        $('#enviando-kleber').hide();
-        $('#erro-kleber').show();
-      }
-    });
-  });
 });
