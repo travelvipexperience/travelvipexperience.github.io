@@ -164,18 +164,18 @@ jQuery(document).ready(function($) {
       data: $(this).serialize(),
       dataType: 'json',
       beforeSend: function() {
-        $('#erro').hide();
-        $('#enviando').show();
+        $('#erro-kleber').hide();
+        $('#enviando-kleber').show();
       },
       success: function(data) {
-        $('#enviando').hide();
-        $('#info').hide();
-        $('#contact-form').hide();
-        $('#thankYou').show();
+        $('#enviando-kleber').hide();
+        $('#info-kleber').hide();
+        $('#contact-form-kleber').hide();
+        $('#thankYou-kleber').show();
       },
       error: function(err) {
-        $('#enviando').hide();
-        $('#erro').show();
+        $('#enviando-kleber').hide();
+        $('#erro-kleber').show();
       }
     });
   });
