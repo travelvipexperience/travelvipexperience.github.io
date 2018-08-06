@@ -140,6 +140,8 @@ jQuery(document).ready(function($) {
       dataType: 'json',
       beforeSend: function() {
         $('#enviando').show();
+        $('#thankYou').show();
+        $('#erro').show();
       },
       success: function(data) {
         $('#enviando').hide();
