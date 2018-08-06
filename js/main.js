@@ -154,4 +154,29 @@ jQuery(document).ready(function($) {
       }
     });
   });
+
+  var $contactForm = $('#contact-form-kleber');
+  $contactForm.submit(function(e) {
+    e.preventDefault();
+    $.ajax({
+      url: '//formspree.io/xajkqppm',
+      method: 'POST',
+      data: $(this).serialize(),
+      dataType: 'json',
+      beforeSend: function() {
+        $('#erro').hide();
+        $('#enviando').show();
+      },
+      success: function(data) {
+        $('#enviando').hide();
+        $('#info').hide();
+        $('#contact-form').hide();
+        $('#thankYou').show();
+      },
+      error: function(err) {
+        $('#enviando').hide();
+        $('#erro').show();
+      }
+    });
+  });
 });
