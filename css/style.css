@@ -1162,7 +1162,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   font-size: 14px;
 }
 
-.form #sendmessage {
+#sendmessage {
   color: #1dc8cd;
   border: 1px solid #1dc8cd;
   display: none;
@@ -1172,7 +1172,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   margin-bottom: 15px;
 }
 
-.form #errormessage {
+#errormessage {
   color: red;
   display: none;
   border: 1px solid red;
@@ -1182,7 +1182,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   margin-bottom: 15px;
 }
 
-.form #sendmessage.show, .form #errormessage.show, .form .show {
+#sendmessage.show, .form #errormessage.show, .form .show {
   display: block;
 }
 
