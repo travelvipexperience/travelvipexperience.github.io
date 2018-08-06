@@ -133,27 +133,24 @@ jQuery(document).ready(function($) {
   var $contactForm = $('#contact-form');
   $contactForm.submit(function(e) {
     e.preventDefault();
-    var $submit = $('input:submit', $contactForm);
-    var defaultSubmitText = submit.val();
     $.ajax({
       url: '//formspree.io/xajkqppm',
       method: 'POST',
       data: $(this).serialize(),
       dataType: 'json',
       beforeSend: function() {
-        $submit.attr('disabled', true).val('Enviando...');
+        $contactForm.hide();
+        $contactForm.append('<div class="alert alert--loading">Enviando…</div>');
       },
       success: function(data) {
-        $submit.val('Dados enviados com sucesso. Entraremos em contato em breve!');
-        setTimeout(function() {
-          $submit.attr('disabled', false).val(defaultSubmitText);
-        }, 5000);
+        $contactForm.hide();
+        $contactForm.find('.alert--loading').hide();
+        $contactForm.append('<div class="alert alert--success">Dados enviados com sucesso. Entraremos em contato em breve!</div>');
       },
       error: function(err) {
-        $submit.val('Ops! Algo deu errado, tente novamente!');
-        setTimeout(function() {
-          $submit.attr('disabled', false).val(defaultSubmitText);
-        }, 5000);
+        $contactForm.hide();
+        $contactForm.find('.alert--loading').hide();
+        $contactForm.append('<div class="alert alert--error">Ops, algo deu errado, tente enviar novamente!</div>');
       }
     });
   });
