@@ -139,18 +139,15 @@ jQuery(document).ready(function($) {
       data: $(this).serialize(),
       dataType: 'json',
       beforeSend: function() {
-        $contactForm.hide();
-        $contactForm.append('<div class="alert alert--loading">Enviando…</div>');
+        $contactForm.attr('<div class="alert alert--loading">Enviando…</div>');
       },
       success: function(data) {
-        $contactForm.hide();
         $contactForm.find('.alert--loading').hide();
-        $contactForm.append('<div class="alert alert--success">Dados enviados com sucesso. Entraremos em contato em breve!</div>');
+        $contactForm.attr('<div class="alert alert--success">Dados enviados com sucesso. Entraremos em contato em breve!</div>');
       },
       error: function(err) {
-        $contactForm.hide();
         $contactForm.find('.alert--loading').hide();
-        $contactForm.append('<div class="alert alert--error">Ops, algo deu errado, tente enviar novamente!</div>');
+        $contactForm.attr('<div class="alert alert--error">Ops, algo deu errado, tente enviar novamente!</div>');
       }
     });
   });
