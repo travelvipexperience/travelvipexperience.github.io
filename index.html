@@ -2,26 +2,25 @@
 <html lang="pt-br">
 <head>
   <meta charset="utf-8">
-  <!-- Favicons -->
-  <link href="img/favicon.ico" rel="icon">
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <meta content="" name="keywords">
+
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700|Open+Sans:300,300i,400,400i,700,700i" rel="stylesheet">
+  
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+  
+  <link type="text/css" rel="stylesheet" href="css/style.css">
 
-  <!-- Bootstrap CSS File -->
-  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="fontawesome/css/all.css">
 
-  <!-- Libraries CSS Files -->
-  <link href="lib/animate/animate.min.css" rel="stylesheet">
-  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
-  <link href="lib/magnific-popup/magnific-popup.css" rel="stylesheet">
-
-  <!-- Main Stylesheet File -->
-  <link href="css/style.css" rel="stylesheet">
-
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <meta content="" name="keywords">
+  <link rel="icon" href="./assets/img/favicon.ico">
 
   <link rel="canonical" href="https://travelvipexperience.com/">
   
@@ -48,82 +47,63 @@
   <meta name="google-site-verification" content="WXDj7Gh2mSWZmEONVqmH27Tc9qlj9OY2avyQ1T-mB9g" />
   
   <title>Travel VIP Experience - Liberdade, Diversão e Realização!</title>
-
-  <!-- =======================================================
-    Theme Name: Avilon
-    Theme URL: https://bootstrapmade.com/avilon-bootstrap-landing-page-template/
-    Author: BootstrapMade.com
-    License: https://bootstrapmade.com/license/
-  ======================================================= -->
 </head>
 <body>
-  <!--==========================
-    Intro Section
-  ============================-->
-  <section id="intro">
-
-    <div class="intro-text">
-      <h2><b>SUA JORNADA COMEÇA AQUI</b>!</h2>
-      <p>Junte-se a uma comunidade de entusiastas da vida cuja sede de aventura não tem limites, pronta para fazer uma jornada de autodescoberta por meio de experiências compartilhadas e do poder transformador das viagens.</p>
+  <div class="section center" id="index-banner">
+    <div class="row">
+      <h2 class="white-text container"><b>SUA JORNADA COMEÇA AQUI</b>!</h2>
+      <p>Junte-se a uma comunidade de viajantes profissionais, cujo desejo de experiências inesquecíveis pelo mundo não tem limites. Descubra como mais de <b>2 milhões</b> de pessoas pagam até <b>80% menos</b> para viajar e até são remuneradas para isso.<br><br>Quer saber mais sobre como ser um viajante por profissão?</p>
     </div>
-
-    <div class="product-screens container">
-      <div class="intro-text2 form">
-
+    
+    <div class="row container">
+      <div class="center container">
         <div id="info">
-          <span>Informe o seu <b>nome, e-mail e número</b> para receber mais informações.</span>
+          <span class="white-text">Informe o seu <b>nome, e-mail e número</b> para receber mais informações.</span>  
         </div>
         
         <form id="contact-form" style="margin-top: 20px;" class="col-md-8 col-md-push-2" action="https://formspree.io/xajkqppm" method="POST">
-          <div class="form-group">
-            <input type="text" name="Nome" class="form-control" id="nome" placeholder="Seu nome" required aria-required="true" />
-            <div class="validation"></div>
+          <div class="input-field">
+            <input id="nome" type="text" name="Nome" placeholder="Seu nome" required aria-required="true">
+          </div>
+  
+          <div class="input-field">
+            <input id="email" type="email" name="E-mail" placeholder="Seu e-mail" required aria-required="true">
           </div>
 
-          <div class="form-group">
-            <input type="email" class="form-control" name="E-mail" id="e-mail" placeholder="Seu e-mail" required aria-required="true" />
-            <div class="validation"></div>
+          <div class="input-field">
+            <input id="celular" type="tel" name="Celular" placeholder="DDD + Celular" required aria-required="true">
           </div>
-          
-          <div class="form-group">
-            <input type="tel" class="form-control" name="Celular" id="celular" placeholder="DDD + Celular" required aria-required="true"/>
-            <div class="validation"></div>
-          </div>
-          
-          <div class="text-center">
-            <input type="hidden" name="_next" value="#" />
-            <input type="hidden" name="_subject" value="Contato Site" />
-            <input type="hidden" name="_language" value="pt-BR"/>
-            
-            <button type="submit" value="send" class="btn btn-primary"><b>Enviar</b></button>
+
+          <div class="row center">
+            <div class="input-field">
+              <input type="hidden" name="_next" value="#" />
+              <input type="hidden" name="_subject" value="Contato Site Renata Molinaro" />
+              <input type="hidden" name="_language" value="pt-BR" />
+              
+              <button class="btn btn-medium waves-effect waves-light white" type="submit" value="send">
+                <b class="primary-color">Enviar</b>
+                <i class="material-icons right primary-color">send</i>
+              </button>
+            </div>
           </div>
         </form>
-
         <div id="enviando" style="display: none; margin-top: 10px;">
-          <span><b>Enviando seus dados...</b></span>
+          <span class="white-text"><b>Enviando seus dados...</b></span>
         </div>
         <div id="thankYou" style="display: none; margin-top: 10px;">
-          <span><b>Dados enviados com sucesso. Entraremos em contato em breve!</b></span>
+          <span class="white-text"><b>Dados enviados com sucesso. Entraremos em contato em breve!</b></span>
         </div>
         <div id="erro" style="display: none; margin-top: 10px;">
-          <span><b>Ops, algo deu errado. Tente novamente!</b></span>
+          <span class="white-text"><b>Ops, algo deu errado. Tente novamente!</b></span>
         </div>
       </div>
     </div>
-  </section><!-- #intro -->
+  </div>
 
-  <!-- JavaScript Libraries -->
-  <script src="lib/jquery/jquery.min.js"></script>
-  <script src="lib/jquery/jquery-migrate.min.js"></script>
-  <script src="lib/jquery/jquery.mask.js" type="text/javascript"></script>
-  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="lib/easing/easing.min.js"></script>
-  <script src="lib/wow/wow.min.js"></script>
-  <script src="lib/superfish/hoverIntent.js"></script>
-  <script src="lib/superfish/superfish.min.js"></script>
-  <script src="lib/magnific-popup/magnific-popup.min.js"></script>
-
-  <!-- Template Main Javascript File -->
-  <script src="js/main.js"></script>
-</body>
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script type="text/javascript" src="js/scripts.js"></script>
+  <script src="js/jquery.mask.js" type="text/javascript"></script>
+  </body>
 </html>
