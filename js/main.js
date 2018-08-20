@@ -40,7 +40,7 @@ $(document).ready(function(){
     $contactForm.submit(function(e) {
         e.preventDefault();
         $.ajax({
-        url: '//formspree.io/xpregwrx',
+        url: '//formspree.io/mowolozm',
         method: 'POST',
         data: $(this).serialize(),
         dataType: 'json',

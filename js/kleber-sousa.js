@@ -5,7 +5,7 @@ $(document).ready(function(){
     $contactForm.submit(function(e) {
         e.preventDefault();
         $.ajax({
-        url: '//formspree.io/mowzoevm',
+        url: '//formspree.io/xwbdqgpm',
         method: 'POST',
         data: $(this).serialize(),
         dataType: 'json',
